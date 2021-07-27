@@ -77,5 +77,8 @@ flutter:
     - family: Anton
       fonts:
         - asset: fonts/Anton-Regular.ttf
+    - family: PStart
+      fonts:
+        - asset: fonts/PressStart2P-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

@@ -1,25 +1,5 @@
 import 'package:flutter/material.dart';
 
-// class BuildingPC extends StatelessWidget{
-//   @override
-//   Widget build(BuildContext context) {
-//     // TODO: implement build
-//     return Scaffold(
-//       body:
-//       Column(
-//         crossAxisAlignment: CrossAxisAlignment.stretch,
-//         children: [
-//           Center(
-//             child: Text('Pilih Komponen PC mu !'),
-//           ),
-//           Center()
-//         ],
-//       ),
-//
-//     );
-//   }
-// }
-
 class BuildingPC extends StatefulWidget{
   @override
   _BuildingPCState createState() => _BuildingPCState();
@@ -45,7 +25,7 @@ class _BuildingPCState extends State<BuildingPC>{
                   backgroundColor: Colors.grey,
                   child: IconButton(
                     icon: Icon(
-                      Icons.arrow_back,
+                      Icons.home,
                       color: Colors.white,
                     ),
                     onPressed: () {
@@ -171,18 +151,37 @@ class _BuildingPCState extends State<BuildingPC>{
                   ],
                 )
             ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 20.0),
+            Center(
               child:
-              Text('Estimasi Harga : RP ....',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20,
-                fontFamily: 'PTSans',
-              ),),
-            )
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 10.0),
+                child:
+                ElevatedButton(onPressed: (){
+                }, child:
+                Text('Rakit !')
+                ),
+              ),
+            ),
+            RakitPC()
           ],
         ),
+    );
+  }
+}
+
+class RakitPC extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 20.0),
+      child:
+      Text('Estimasi Harga : Rp ....',
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          fontSize: 20,
+          fontFamily: 'PTSans',
+        ),),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:build_a_pc/build_pc.dart';
+import 'package:build_a_pc/reccomendation.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget{
@@ -58,52 +59,126 @@ class MainScreen extends StatelessWidget{
                         color: Colors.white,
                         fontFamily: 'Anton',
                       ),),
+
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Column(
+                          Expanded(child:
+                            Column(
                             children: [
                               Image.asset('images/processor.png'),
                               Text('Processor',
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.white,
                                 ),),
                             ],
                           ),
-
-                          Column(
-                            children: [
-                              Image.asset('images/motherboard.png'),
-                              Text('Motherboard',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),)
-                            ],
                           ),
-                          Column(
-                            children: [
-                              Image.asset('images/ram.png'),
-                              Text('RAM',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),)
-                            ],
+                          Expanded(child:
+                            Column(
+                              children: [
+                                Image.asset('images/motherboard.png'),
+                                Text('Motherboard',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),)
+                              ],
+                            ),
                           ),
+                          Expanded(child:
+                            Column(
+                              children: [
+                                Image.asset('images/ram.png'),
+                                Text('RAM',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),)
+                              ],
+                            ),
+                          ),
+                          Expanded(child:
                           Column(
                             children: [
                               Image.asset('images/harddrive.png'),
                               Text('Storage',
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),)
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),)
                             ],
                           ),
+                          )
                         ],
                       ),
                     ],
                   ),
                 ),
-                Text('Ingin Rekomendasi PC ?'),
+                Container(
+                  color: Colors.grey,
+                  padding: EdgeInsets.all(20),
+                  child:
+                  Column(
+                    children: [
+                      Text('Ingin Rekomendasi PC ?',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 26.0,
+                          fontFamily: 'Anton',
+                        ),),
+                      Container(
+                        height: 270,
+                        child:
+                        ListView(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset('images/lowtier.jpg'),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset('images/midtier.jpg'),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child:
+                                Image.asset('images/hightier.jpg'),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(20),
+                        child:
+                        OutlinedButton(onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return PCRecommend();
+                          }));
+                        }, child:
+                          Text('Lihat Rekomendasi',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontFamily: 'PTSans',
+                            color: Colors.white70
+                          ),),
+                        ),
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
           ],
