@@ -9,3 +9,5 @@ Dalam aplikasi ini ada 3 Bagian utama yaitu:
 1. Halaman Utama (mainpage.dart)
 2. Fitur merakit PC (rakit_pc.dart)
 3. Rekomendasi PC (recommendation.dart)
+
+Created By : Darvin
