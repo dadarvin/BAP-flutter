@@ -1,5 +1,5 @@
-# build_a_pc
-<br>
+# BAP (Build A PC)
+This Project is created with flutter framework using dart programming language
 
 ## This is a Dicoding Submission Flutter Project
 
