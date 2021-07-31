@@ -12,5 +12,5 @@ Dalam aplikasi ini ada 3 Bagian utama yaitu:
 
 Created By : Darvin
 
-##Todo:
+## Todo:
 Changing variables in rakit_pc to Private
