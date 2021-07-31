@@ -11,3 +11,6 @@ Dalam aplikasi ini ada 3 Bagian utama yaitu:
 3. Rekomendasi PC (recommendation.dart)
 
 Created By : Darvin
+
+##Todo:
+Changing variables in rakit_pc to Private
